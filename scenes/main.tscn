@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dd1yyk8aukyg7"]
+
+[ext_resource type="Script" uid="uid://utgfyo25sesi" path="res://scripts/main.gd" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://dpv2vhdsv2782" path="res://scenes/star_map/star_view.tscn" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://5y22e1bepaxq" path="res://scenes/star_map/warp_route.tscn" id="3_sugp2"]
+[ext_resource type="PackedScene" uid="uid://drvculvyjfluk" path="res://scenes/UI/info_panel.tscn" id="4_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://bch8bluf2lx1a" path="res://scenes/UI/planet_panel.tscn" id="4_tbgi4"]
+
+[sub_resource type="Gradient" id="Gradient_0wfyh"]
+offsets = PackedFloat32Array(0.94578314, 0.9819277, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.939759, 0.939759, 0.939759, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_sugp2"]
+gradient = SubResource("Gradient_0wfyh")
+
+[node name="main" type="Node" unique_id=1648656417]
+script = ExtResource("1_o5qli")
+starScene = ExtResource("2_0wfyh")
+routeScene = ExtResource("3_sugp2")
+starPanelScene = ExtResource("4_tbgi4")
+testDataPath = "res://assets/star_map/test_galaxy_meme.json"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=343577467]
+z_index = -12
+offset_left = -157.0
+offset_top = -85.0
+offset_right = 1498.0
+offset_bottom = 1453.0
+texture = SubResource("GradientTexture1D_sugp2")
+
+[node name="Timer" type="Timer" parent="." unique_id=677531953]
+wait_time = 5.0
+autostart = true
+
+[node name="InfoPanel" parent="." unique_id=1771736017 instance=ExtResource("4_jyhfs")]
+offset_left = 1426.0
+offset_top = -10.0
+offset_right = 1502.0
+offset_bottom = 780.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="openStar" from="InfoPanel" to="." method="_on_info_panel_open_star"]

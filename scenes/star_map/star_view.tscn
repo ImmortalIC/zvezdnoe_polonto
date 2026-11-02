@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dpv2vhdsv2782"]
+
+[ext_resource type="Script" uid="uid://bflewjx2vyub3" path="res://scripts/star_map/view/star_view.gd" id="1_ajrdh"]
+[ext_resource type="Texture2D" uid="uid://v45bdwb407j7" path="res://assets/star_map/sprites/star.png" id="2_lfecq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lfecq"]
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lfecq"]
+
+[node name="StarView" type="Node2D" unique_id=1781806857]
+script = ExtResource("1_ajrdh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1211596720]
+position = Vector2(-3.8146973e-06, -1.0000153)
+scale = Vector2(0.064645305, 0.0644105)
+texture = ExtResource("2_lfecq")
+
+[node name="Label" type="Label" parent="." unique_id=452904774]
+z_index = 9
+offset_left = -25.0
+offset_top = 17.0
+offset_right = 31.0
+offset_bottom = 40.0
+label_settings = SubResource("LabelSettings_lfecq")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1848257755]
+position = Vector2(0, -1)
+scale = Vector2(0.9, 0.9)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1881162179]
+shape = SubResource("CircleShape2D_lfecq")
+debug_color = Color(0.013463711, 0.5665109, 0.8609942, 0.41960785)
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

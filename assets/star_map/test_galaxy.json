@@ -1,0 +1,401 @@
+{
+  "stars": [
+	{
+	  "id": "star_01",
+	  "name": "Солара",
+	  "x": 180,
+	  "y": 220,
+	  "planets": [
+		{
+		  "name": "Аурелия",
+		  "population_limit": 850,
+		  "agriculture_coefficient": 8.5,
+		  "mining_coefficient": 2.0,
+		  "fuel_coefficient": 3.0,
+		  "habitability": 0.95,
+		  "colony": {
+			"starting_population": 620,
+			"infrastructure": 0.75,
+			"food_percent": 65,
+			"mining_percent": 10,
+			"fuel_percent": 10,
+			"processing_percent": 15,
+			"food_stock": 2500,
+			"minerals_stock": 800,
+			"fuel_stock": 1200,
+			"processed_metal_stock": 350
+		  }
+		},
+		{
+		  "name": "Кремния",
+		  "population_limit": 400,
+		  "agriculture_coefficient": 1.5,
+		  "mining_coefficient": 9.0,
+		  "fuel_coefficient": 2.0,
+		  "habitability": 0.55,
+		  "colony": null
+		},
+		{
+		  "name": "Веста",
+		  "population_limit": 250,
+		  "agriculture_coefficient": 2.0,
+		  "mining_coefficient": 3.0,
+		  "fuel_coefficient": 7.5,
+		  "habitability": 0.7,
+		  "colony": null
+		}
+	  ]
+	},
+	{
+	  "id": "star_02",
+	  "name": "Вольфрам",
+	  "x": 420,
+	  "y": 120,
+	  "planets": [
+		{
+		  "name": "Гефест",
+		  "population_limit": 500,
+		  "agriculture_coefficient": 1.0,
+		  "mining_coefficient": 9.5,
+		  "fuel_coefficient": 3.0,
+		  "habitability": 0.45,
+		  "colony": {
+			"starting_population": 300,
+			"infrastructure": 0.6,
+			"food_percent": 10,
+			"mining_percent": 65,
+			"fuel_percent": 10,
+			"processing_percent": 15,
+			"food_stock": 700,
+			"minerals_stock": 4500,
+			"fuel_stock": 500,
+			"processed_metal_stock": 200
+		  }
+		},
+		{
+		  "name": "Кобальт",
+		  "population_limit": 650,
+		  "agriculture_coefficient": 3.0,
+		  "mining_coefficient": 7.0,
+		  "fuel_coefficient": 4.0,
+		  "habitability": 0.65,
+		  "colony": null
+		}
+	  ]
+	},
+	{
+	  "id": "star_03",
+	  "name": "Нова",
+	  "x": 650,
+	  "y": 200,
+	  "planets": [
+		{
+		  "name": "Эдем",
+		  "population_limit": 1000,
+		  "agriculture_coefficient": 7.0,
+		  "mining_coefficient": 3.0,
+		  "fuel_coefficient": 2.0,
+		  "habitability": 1.0,
+		  "colony": {
+			"starting_population": 800,
+			"infrastructure": 0.8,
+			"food_percent": 55,
+			"mining_percent": 15,
+			"fuel_percent": 5,
+			"processing_percent": 25,
+			"food_stock": 5000,
+			"minerals_stock": 1500,
+			"fuel_stock": 1000,
+			"processed_metal_stock": 600
+		  }
+		},
+		{
+		  "name": "Пепельный",
+		  "population_limit": 350,
+		  "agriculture_coefficient": 0.5,
+		  "mining_coefficient": 5.0,
+		  "fuel_coefficient": 8.0,
+		  "habitability": 0.35,
+		  "colony": null
+		},
+		{
+		  "name": "Люмен",
+		  "population_limit": 700,
+		  "agriculture_coefficient": 5.0,
+		  "mining_coefficient": 4.0,
+		  "fuel_coefficient": 5.0,
+		  "habitability": 0.8,
+		  "colony": null
+		},
+		{
+		  "name": "Орбис",
+		  "population_limit": 200,
+		  "agriculture_coefficient": 2.0,
+		  "mining_coefficient": 2.0,
+		  "fuel_coefficient": 3.0,
+		  "habitability": 0.6,
+		  "colony": null
+		}
+	  ]
+	},
+	{
+	  "id": "star_04",
+	  "name": "Тарсис",
+	  "x": 870,
+	  "y": 330,
+	  "planets": [
+		{
+		  "name": "Магма",
+		  "population_limit": 450,
+		  "agriculture_coefficient": 0.5,
+		  "mining_coefficient": 6.0,
+		  "fuel_coefficient": 9.5,
+		  "habitability": 0.3,
+		  "colony": {
+			"starting_population": 180,
+			"infrastructure": 0.45,
+			"food_percent": 10,
+			"mining_percent": 20,
+			"fuel_percent": 60,
+			"processing_percent": 10,
+			"food_stock": 400,
+			"minerals_stock": 1200,
+			"fuel_stock": 6000,
+			"processed_metal_stock": 100
+		  }
+		},
+		{
+		  "name": "Базальт",
+		  "population_limit": 600,
+		  "agriculture_coefficient": 2.0,
+		  "mining_coefficient": 8.0,
+		  "fuel_coefficient": 5.0,
+		  "habitability": 0.5,
+		  "colony": null
+		}
+	  ]
+	},
+	{
+	  "id": "star_05",
+	  "name": "Лира",
+	  "x": 1050,
+	  "y": 150,
+	  "planets": [
+		{
+		  "name": "Мелодия",
+		  "population_limit": 900,
+		  "agriculture_coefficient": 6.5,
+		  "mining_coefficient": 3.5,
+		  "fuel_coefficient": 3.0,
+		  "habitability": 0.9,
+		  "colony": null
+		},
+		{
+		  "name": "Гранит",
+		  "population_limit": 550,
+		  "agriculture_coefficient": 2.0,
+		  "mining_coefficient": 8.5,
+		  "fuel_coefficient": 4.0,
+		  "habitability": 0.6,
+		  "colony": null
+		},
+		{
+		  "name": "Сапфир",
+		  "population_limit": 300,
+		  "agriculture_coefficient": 4.0,
+		  "mining_coefficient": 5.0,
+		  "fuel_coefficient": 6.0,
+		  "habitability": 0.75,
+		  "colony": null
+		}
+	  ]
+	},
+	{
+	  "id": "star_06",
+	  "name": "Арктур",
+	  "x": 120,
+	  "y": 470,
+	  "planets": [
+		{
+		  "name": "Зерна",
+		  "population_limit": 750,
+		  "agriculture_coefficient": 9.0,
+		  "mining_coefficient": 2.5,
+		  "fuel_coefficient": 2.0,
+		  "habitability": 0.95,
+		  "colony": {
+			"starting_population": 500,
+			"infrastructure": 0.65,
+			"food_percent": 70,
+			"mining_percent": 10,
+			"fuel_percent": 5,
+			"processing_percent": 15,
+			"food_stock": 4200,
+			"minerals_stock": 600,
+			"fuel_stock": 300,
+			"processed_metal_stock": 250
+		  }
+		},
+		{
+		  "name": "Шлак",
+		  "population_limit": 300,
+		  "agriculture_coefficient": 1.0,
+		  "mining_coefficient": 7.5,
+		  "fuel_coefficient": 6.0,
+		  "habitability": 0.4,
+		  "colony": null
+		}
+	  ]
+	},
+	{
+	  "id": "star_07",
+	  "name": "Кассиопея",
+	  "x": 380,
+	  "y": 430,
+	  "planets": [
+		{
+		  "name": "Феррум",
+		  "population_limit": 800,
+		  "agriculture_coefficient": 3.0,
+		  "mining_coefficient": 8.0,
+		  "fuel_coefficient": 4.0,
+		  "habitability": 0.7,
+		  "colony": {
+			"starting_population": 450,
+			"infrastructure": 0.7,
+			"food_percent": 15,
+			"mining_percent": 40,
+			"fuel_percent": 10,
+			"processing_percent": 35,
+			"food_stock": 900,
+			"minerals_stock": 3000,
+			"fuel_stock": 800,
+			"processed_metal_stock": 700
+		  }
+		},
+		{
+		  "name": "Никс",
+		  "population_limit": 400,
+		  "agriculture_coefficient": 1.5,
+		  "mining_coefficient": 4.0,
+		  "fuel_coefficient": 8.0,
+		  "habitability": 0.45,
+		  "colony": null
+		},
+		{
+		  "name": "Эос",
+		  "population_limit": 950,
+		  "agriculture_coefficient": 6.0,
+		  "mining_coefficient": 3.0,
+		  "fuel_coefficient": 3.5,
+		  "habitability": 0.85,
+		  "colony": null
+		}
+	  ]
+	},
+	{
+	  "id": "star_08",
+	  "name": "Орион",
+	  "x": 650,
+	  "y": 500,
+	  "planets": [
+		{
+		  "name": "Титан",
+		  "population_limit": 700,
+		  "agriculture_coefficient": 2.0,
+		  "mining_coefficient": 9.0,
+		  "fuel_coefficient": 6.0,
+		  "habitability": 0.55,
+		  "colony": null
+		},
+		{
+		  "name": "Флора",
+		  "population_limit": 850,
+		  "agriculture_coefficient": 8.0,
+		  "mining_coefficient": 2.0,
+		  "fuel_coefficient": 3.0,
+		  "habitability": 0.9,
+		  "colony": null
+		}
+	  ]
+	},
+	{
+	  "id": "star_09",
+	  "name": "Сириус",
+	  "x": 900,
+	  "y": 570,
+	  "planets": [
+		{
+		  "name": "Прометей",
+		  "population_limit": 600,
+		  "agriculture_coefficient": 3.0,
+		  "mining_coefficient": 5.0,
+		  "fuel_coefficient": 7.0,
+		  "habitability": 0.7,
+		  "colony": null
+		},
+		{
+		  "name": "Атлас",
+		  "population_limit": 1000,
+		  "agriculture_coefficient": 5.0,
+		  "mining_coefficient": 5.0,
+		  "fuel_coefficient": 5.0,
+		  "habitability": 0.85,
+		  "colony": null
+		},
+		{
+		  "name": "Меркурий",
+		  "population_limit": 450,
+		  "agriculture_coefficient": 1.0,
+		  "mining_coefficient": 7.0,
+		  "fuel_coefficient": 8.5,
+		  "habitability": 0.4,
+		  "colony": null
+		}
+	  ]
+	},
+	{
+	  "id": "star_10",
+	  "name": "Вега",
+	  "x": 1120,
+	  "y": 420,
+	  "planets": [
+		{
+		  "name": "Аркадия",
+		  "population_limit": 950,
+		  "agriculture_coefficient": 7.5,
+		  "mining_coefficient": 3.0,
+		  "fuel_coefficient": 4.0,
+		  "habitability": 0.95,
+		  "colony": null
+		},
+		{
+		  "name": "Обсидиан",
+		  "population_limit": 500,
+		  "agriculture_coefficient": 1.0,
+		  "mining_coefficient": 9.0,
+		  "fuel_coefficient": 5.0,
+		  "habitability": 0.5,
+		  "colony": null
+		}
+	  ]
+	}
+  ],
+  "routes": [
+	 { "pointA": "star_01", "pointB": "star_02", "length": 1281 },
+  { "pointA": "star_02", "pointB": "star_03", "length": 1250 },
+  { "pointA": "star_03", "pointB": "star_04", "length": 1275 },
+  { "pointA": "star_04", "pointB": "star_05", "length": 1118 },
+  { "pointA": "star_05", "pointB": "star_10", "length": 1360 },
+  { "pointA": "star_10", "pointB": "star_09", "length": 901 },
+  { "pointA": "star_09", "pointB": "star_08", "length": 1275 },
+  { "pointA": "star_08", "pointB": "star_07", "length": 1380 },
+  { "pointA": "star_07", "pointB": "star_06", "length": 1379 },
+  { "pointA": "star_06", "pointB": "star_01", "length": 1300 },
+  { "pointA": "star_01", "pointB": "star_07", "length": 1100 },
+  { "pointA": "star_02", "pointB": "star_07", "length": 500 },
+  { "pointA": "star_03", "pointB": "star_08", "length": 1500 },
+  { "pointA": "star_04", "pointB": "star_09", "length": 1100 },
+  { "pointA": "star_02", "pointB": "star_06", "length": 1700 }
+  ]
+}

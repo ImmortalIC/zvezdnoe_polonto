@@ -1,0 +1,453 @@
+[gd_scene format=3 uid="uid://bch8bluf2lx1a"]
+
+[ext_resource type="Texture2D" uid="uid://jor2nrl7m4bf" path="res://assets/UI/planet_window.png" id="1_fajmp"]
+[ext_resource type="Script" uid="uid://djt4li3k5sfre" path="res://scenes/UI/planet_panel.gd" id="1_le55d"]
+[ext_resource type="PackedScene" uid="uid://bix4ykvqpyc4t" path="res://scenes/star_map/planet_view.tscn" id="2_f2p0o"]
+[ext_resource type="Texture2D" uid="uid://du0sbt5vct886" path="res://assets/UI/population.png" id="4_m3fj6"]
+[ext_resource type="Texture2D" uid="uid://cd4sfub1uauoc" path="res://assets/UI/food.png" id="5_gv4ni"]
+[ext_resource type="Texture2D" uid="uid://llmg5xv3gxep" path="res://assets/UI/minerals.png" id="6_s4ic4"]
+[ext_resource type="Texture2D" uid="uid://bn6w2smjwpp2d" path="res://assets/UI/fuel.png" id="7_704v8"]
+[ext_resource type="Texture2D" uid="uid://cx4s4tys87kej" path="res://assets/UI/populated.png" id="8_e02qe"]
+[ext_resource type="LabelSettings" uid="uid://b7s3onc02yrek" path="res://assets/star_map/planeе_info_font.tres" id="9_1rjwy"]
+[ext_resource type="Texture2D" uid="uid://4piww0c35pj5" path="res://assets/UI/empire.png" id="10_h58wr"]
+[ext_resource type="Texture2D" uid="uid://id3uy64vau8y" path="res://assets/UI/processed_materials.png" id="11_ch0re"]
+[ext_resource type="Texture2D" uid="uid://b4815r4e6h4k5" path="res://assets/UI/close_button.png" id="12_f2p0o"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_s2qb2"]
+font_size = 23
+
+[node name="PlanetPanel" type="Control" unique_id=1392445901]
+z_index = 30
+layout_mode = 3
+anchor_right = 0.551
+anchor_bottom = 1.0
+offset_right = -0.9000244
+offset_bottom = -4.0
+script = ExtResource("1_le55d")
+planetScene = ExtResource("2_f2p0o")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1860964190]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.005
+offset_left = 6.0
+offset_top = 1.0
+offset_right = -4.0
+offset_bottom = 16.78003
+texture = ExtResource("1_fajmp")
+
+[node name="StarName" type="Label" parent="." unique_id=1947199783]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 23.0
+offset_right = 117.0
+offset_bottom = 46.0
+
+[node name="PlanetName" type="Label" parent="." unique_id=783229891]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 753.0
+offset_top = 54.0
+offset_right = -131.0
+offset_bottom = -548.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Железяка"
+label_settings = SubResource("LabelSettings_s2qb2")
+
+[node name="PlanetState" type="Label" parent="." unique_id=825425520]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.018000001
+offset_left = 760.0
+offset_top = 90.0
+offset_right = 990.0
+offset_bottom = 101.408
+text = "Ненаселенная планета"
+
+[node name="HSeparator" type="HSeparator" parent="." unique_id=823870327]
+z_index = 4
+layout_mode = 0
+offset_left = 733.0
+offset_top = 123.0
+offset_right = 1030.0
+offset_bottom = 146.02556
+
+[node name="PlanetStatsContainer" type="VBoxContainer" parent="." unique_id=1461433596]
+layout_mode = 0
+offset_left = 737.0
+offset_top = 143.0
+offset_right = 1011.694
+offset_bottom = 414.36356
+
+[node name="Label" type="Label" parent="PlanetStatsContainer" unique_id=2096136928]
+layout_mode = 2
+text = "Характеристики планеты"
+
+[node name="MaxPop" type="HBoxContainer" parent="PlanetStatsContainer" unique_id=562573437]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PlanetStatsContainer/MaxPop" unique_id=1211677902]
+z_index = 4
+layout_mode = 2
+texture = ExtResource("4_m3fj6")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="PlanetStatsContainer/MaxPop" unique_id=2117395279]
+layout_mode = 2
+
+[node name="FoodCoeficient" type="HBoxContainer" parent="PlanetStatsContainer" unique_id=929923308]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PlanetStatsContainer/FoodCoeficient" unique_id=318890839]
+z_index = 4
+layout_mode = 2
+texture = ExtResource("5_gv4ni")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="PlanetStatsContainer/FoodCoeficient" unique_id=1955928191]
+layout_mode = 2
+
+[node name="MiningCoeficient" type="HBoxContainer" parent="PlanetStatsContainer" unique_id=1458550889]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PlanetStatsContainer/MiningCoeficient" unique_id=114137424]
+z_index = 4
+layout_mode = 2
+texture = ExtResource("6_s4ic4")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="PlanetStatsContainer/MiningCoeficient" unique_id=2016237844]
+layout_mode = 2
+
+[node name="FuelCoeficient" type="HBoxContainer" parent="PlanetStatsContainer" unique_id=795229194]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PlanetStatsContainer/FuelCoeficient" unique_id=1318285348]
+z_index = 4
+layout_mode = 2
+texture = ExtResource("7_704v8")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="PlanetStatsContainer/FuelCoeficient" unique_id=1389707028]
+layout_mode = 2
+
+[node name="Habitability" type="HBoxContainer" parent="PlanetStatsContainer" unique_id=913327760]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PlanetStatsContainer/Habitability" unique_id=1406894463]
+z_index = 4
+layout_mode = 2
+texture = ExtResource("8_e02qe")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="PlanetStatsContainer/Habitability" unique_id=1041320565]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="." unique_id=1076851030]
+z_index = 4
+layout_mode = 0
+offset_left = 723.0
+offset_top = 302.0
+offset_right = 1127.1925
+offset_bottom = 325.02557
+scale = Vector2(0.7496428, 1)
+
+[node name="ColonyStatsContainer" type="VBoxContainer" parent="." unique_id=123122113]
+layout_mode = 0
+offset_left = 731.0
+offset_top = 322.0
+offset_right = 1021.0
+offset_bottom = 630.0
+
+[node name="Population" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=1793747376]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/Population" unique_id=539412114]
+z_index = 4
+layout_mode = 2
+texture = ExtResource("4_m3fj6")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="ColonyStatsContainer/Population" unique_id=18845336]
+layout_mode = 2
+text = "dsdsads"
+label_settings = ExtResource("9_1rjwy")
+
+[node name="Infrastructure" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=296975473]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/Infrastructure" unique_id=1618383130]
+z_index = 4
+layout_mode = 2
+texture = ExtResource("10_h58wr")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="ColonyStatsContainer/Infrastructure" unique_id=2121472577]
+layout_mode = 2
+text = "asdasd"
+label_settings = ExtResource("9_1rjwy")
+
+[node name="Label" type="Label" parent="ColonyStatsContainer" unique_id=462997695]
+layout_mode = 2
+text = "Состав Экономики"
+label_settings = ExtResource("9_1rjwy")
+
+[node name="FoodEconomics" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=1114692422]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/FoodEconomics" unique_id=1034424820]
+z_index = 4
+layout_mode = 2
+texture = ExtResource("5_gv4ni")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="ColonyStatsContainer/FoodEconomics" unique_id=846756198]
+layout_mode = 2
+text = "asdasdas"
+label_settings = ExtResource("9_1rjwy")
+
+[node name="MiningEconomics" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=1580993701]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/MiningEconomics" unique_id=441218276]
+z_index = 4
+layout_mode = 2
+texture = ExtResource("6_s4ic4")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="ColonyStatsContainer/MiningEconomics" unique_id=563584860]
+layout_mode = 2
+text = "adasdas"
+label_settings = ExtResource("9_1rjwy")
+
+[node name="FuelEconomics" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=358522696]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/FuelEconomics" unique_id=419589786]
+z_index = 4
+layout_mode = 2
+texture = ExtResource("7_704v8")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="ColonyStatsContainer/FuelEconomics" unique_id=1643001060]
+layout_mode = 2
+text = "asdadsa"
+label_settings = ExtResource("9_1rjwy")
+
+[node name="MaterialsEconomics" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=404835692]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/MaterialsEconomics" unique_id=1125532949]
+z_index = 4
+layout_mode = 2
+texture = ExtResource("11_ch0re")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="ColonyStatsContainer/MaterialsEconomics" unique_id=2106757607]
+layout_mode = 2
+text = "asdsadas"
+label_settings = ExtResource("9_1rjwy")
+
+[node name="Label2" type="Label" parent="ColonyStatsContainer" unique_id=94560044]
+layout_mode = 2
+text = "Производство"
+label_settings = ExtResource("9_1rjwy")
+
+[node name="FoodProduction" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=187593886]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/FoodProduction" unique_id=989652753]
+z_index = 4
+layout_mode = 2
+texture = ExtResource("5_gv4ni")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="ColonyStatsContainer/FoodProduction" unique_id=1959268942]
+layout_mode = 2
+text = "asdasdas"
+label_settings = ExtResource("9_1rjwy")
+
+[node name="MineralsProduction" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=1918497843]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/MineralsProduction" unique_id=1738454591]
+z_index = 4
+layout_mode = 2
+texture = ExtResource("6_s4ic4")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="ColonyStatsContainer/MineralsProduction" unique_id=1356356078]
+layout_mode = 2
+text = "adasdas"
+label_settings = ExtResource("9_1rjwy")
+
+[node name="FuelProduction" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=1343808513]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/FuelProduction" unique_id=1822151486]
+z_index = 4
+layout_mode = 2
+texture = ExtResource("7_704v8")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="ColonyStatsContainer/FuelProduction" unique_id=1352934705]
+layout_mode = 2
+text = "asdadsa"
+label_settings = ExtResource("9_1rjwy")
+
+[node name="MaterialsProduction" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=803809615]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/MaterialsProduction" unique_id=317079103]
+z_index = 4
+layout_mode = 2
+texture = ExtResource("11_ch0re")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="ColonyStatsContainer/MaterialsProduction" unique_id=1500443565]
+layout_mode = 2
+text = "asdsadas"
+label_settings = ExtResource("9_1rjwy")
+
+[node name="Label3" type="Label" parent="ColonyStatsContainer" unique_id=1706111220]
+layout_mode = 2
+text = "Потребление"
+label_settings = ExtResource("9_1rjwy")
+
+[node name="FoodConsuption" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=654473155]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/FoodConsuption" unique_id=1228323982]
+z_index = 4
+layout_mode = 2
+texture = ExtResource("5_gv4ni")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="ColonyStatsContainer/FoodConsuption" unique_id=1152710135]
+layout_mode = 2
+text = "asdasdas"
+label_settings = ExtResource("9_1rjwy")
+
+[node name="MineralsConsumption" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=1147698266]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/MineralsConsumption" unique_id=2074595037]
+z_index = 4
+layout_mode = 2
+texture = ExtResource("6_s4ic4")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="ColonyStatsContainer/MineralsConsumption" unique_id=1760767046]
+layout_mode = 2
+text = "adasdas"
+label_settings = ExtResource("9_1rjwy")
+
+[node name="FuelConsumption" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=239957769]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/FuelConsumption" unique_id=668599478]
+z_index = 4
+layout_mode = 2
+texture = ExtResource("7_704v8")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="ColonyStatsContainer/FuelConsumption" unique_id=446631996]
+layout_mode = 2
+text = "asdadsa"
+label_settings = ExtResource("9_1rjwy")
+
+[node name="MaterialsConsumption" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=854244215]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/MaterialsConsumption" unique_id=1057490303]
+z_index = 4
+layout_mode = 2
+texture = ExtResource("11_ch0re")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="ColonyStatsContainer/MaterialsConsumption" unique_id=337897656]
+layout_mode = 2
+text = "asdsadas"
+label_settings = ExtResource("9_1rjwy")
+
+[node name="Label4" type="Label" parent="ColonyStatsContainer" unique_id=953096940]
+layout_mode = 2
+text = "Хранилище"
+label_settings = ExtResource("9_1rjwy")
+
+[node name="FoodStorage" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=408548197]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/FoodStorage" unique_id=673979324]
+z_index = 4
+layout_mode = 2
+texture = ExtResource("5_gv4ni")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="ColonyStatsContainer/FoodStorage" unique_id=2122059323]
+layout_mode = 2
+text = "asdasdas"
+label_settings = ExtResource("9_1rjwy")
+
+[node name="MineralsStorage" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=1145852275]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/MineralsStorage" unique_id=1490271460]
+z_index = 4
+layout_mode = 2
+texture = ExtResource("6_s4ic4")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="ColonyStatsContainer/MineralsStorage" unique_id=399144883]
+layout_mode = 2
+text = "adasdas"
+label_settings = ExtResource("9_1rjwy")
+
+[node name="FuelStorage" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=1670692404]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/FuelStorage" unique_id=2049158620]
+z_index = 4
+layout_mode = 2
+texture = ExtResource("7_704v8")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="ColonyStatsContainer/FuelStorage" unique_id=1305749497]
+layout_mode = 2
+text = "asdadsa"
+label_settings = ExtResource("9_1rjwy")
+
+[node name="MaterialsStorage" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=736979845]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/MaterialsStorage" unique_id=1501218227]
+z_index = 4
+layout_mode = 2
+texture = ExtResource("11_ch0re")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="ColonyStatsContainer/MaterialsStorage" unique_id=1942704267]
+layout_mode = 2
+text = "asdsadas"
+label_settings = ExtResource("9_1rjwy")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=934852679]
+layout_mode = 0
+offset_left = 1016.0
+offset_top = 8.0
+offset_right = 1032.0
+offset_bottom = 24.0
+texture_normal = ExtResource("12_f2p0o")
+
+[node name="PlanetGrid" type="HBoxContainer" parent="." unique_id=2119288857]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 85.0
+offset_right = 720.0
+offset_bottom = 634.0
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

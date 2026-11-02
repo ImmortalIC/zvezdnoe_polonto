@@ -1,0 +1,272 @@
+[gd_scene format=3 uid="uid://drvculvyjfluk"]
+
+[ext_resource type="Script" uid="uid://deepulr2cyjo7" path="res://scripts/UI/info_panel.gd" id="1_b0bq6"]
+[ext_resource type="Texture2D" uid="uid://4piww0c35pj5" path="res://assets/UI/empire.png" id="2_t3yab"]
+[ext_resource type="Texture2D" uid="uid://cakpxx3ftlyln" path="res://assets/UI/planet.png" id="3_ll3rm"]
+[ext_resource type="Texture2D" uid="uid://du0sbt5vct886" path="res://assets/UI/population.png" id="4_wm7lv"]
+[ext_resource type="Texture2D" uid="uid://cd4sfub1uauoc" path="res://assets/UI/food.png" id="5_ajh1b"]
+[ext_resource type="Texture2D" uid="uid://llmg5xv3gxep" path="res://assets/UI/minerals.png" id="6_mferr"]
+[ext_resource type="Texture2D" uid="uid://bn6w2smjwpp2d" path="res://assets/UI/fuel.png" id="7_uku7l"]
+[ext_resource type="Texture2D" uid="uid://id3uy64vau8y" path="res://assets/UI/processed_materials.png" id="8_wcs6u"]
+[ext_resource type="Texture2D" uid="uid://c7wk38yeg5o8j" path="res://assets/UI/info_panel.png" id="9_q7nuj"]
+[ext_resource type="Texture2D" uid="uid://bt8vkx5fao64g" path="res://assets/UI/button.png" id="9_wm7lv"]
+[ext_resource type="Texture2D" uid="uid://dlutchhnql50f" path="res://assets/UI/button_pressed.png" id="10_ajh1b"]
+[ext_resource type="Texture2D" uid="uid://dm5w5pjbgge2m" path="res://assets/UI/button_focus.png" id="11_mferr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lnb7r"]
+
+[node name="InfoPanel" type="Control" unique_id=1771736017]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b0bq6")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1813721117]
+z_index = -8
+layout_mode = 0
+offset_left = 6.0
+offset_top = 29.0
+offset_right = 512.0
+offset_bottom = 1477.0
+texture = ExtResource("9_q7nuj")
+
+[node name="Panel" type="Panel" parent="." unique_id=69397996]
+layout_mode = 0
+offset_top = 13.0
+offset_right = 502.0
+offset_bottom = 1570.0
+
+[node name="CurrentTick" type="Label" parent="Panel" unique_id=838469202]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 19.0
+offset_right = 227.0
+offset_bottom = 42.0
+text = "Текущий тик: {tick}"
+
+[node name="EmpireHeader" type="HBoxContainer" parent="Panel" unique_id=1172257371]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 95.0
+offset_right = 244.0
+offset_bottom = 119.0
+
+[node name="TextureRect" type="TextureRect" parent="Panel/EmpireHeader" unique_id=92644964]
+layout_mode = 2
+texture = ExtResource("2_t3yab")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Panel/EmpireHeader" unique_id=1605597966]
+layout_mode = 2
+accessibility_name = "empire_label"
+text = "Империя: {empire}"
+label_settings = SubResource("LabelSettings_lnb7r")
+
+[node name="EmpireColonyNumber" type="HBoxContainer" parent="Panel" unique_id=157076511]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 122.0
+offset_right = 67.0
+offset_bottom = 145.0
+
+[node name="TextureRect" type="TextureRect" parent="Panel/EmpireColonyNumber" unique_id=1207153872]
+layout_mode = 2
+texture = ExtResource("3_ll3rm")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="Panel/EmpireColonyNumber" unique_id=66838050]
+layout_mode = 2
+accessibility_name = "colony_number"
+
+[node name="CummulativeStorageHeader" type="Label" parent="Panel" unique_id=1890507682]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 182.0
+offset_right = 200.0
+offset_bottom = 205.0
+text = "Суммарные запасы"
+
+[node name="TotalPopulation" type="HBoxContainer" parent="Panel" unique_id=1978779561]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 155.0
+offset_right = 69.0
+offset_bottom = 178.0
+
+[node name="TextureRect" type="TextureRect" parent="Panel/TotalPopulation" unique_id=1567492644]
+layout_mode = 2
+texture = ExtResource("4_wm7lv")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="Panel/TotalPopulation" unique_id=1726853955]
+layout_mode = 2
+accessibility_name = "total_population"
+
+[node name="TotalFood" type="HBoxContainer" parent="Panel" unique_id=1729945405]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 213.0
+offset_right = 77.0
+offset_bottom = 236.0
+
+[node name="TextureRect" type="TextureRect" parent="Panel/TotalFood" unique_id=1344714055]
+layout_mode = 2
+texture = ExtResource("5_ajh1b")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="Panel/TotalFood" unique_id=427350409]
+layout_mode = 2
+accessibility_name = "total_food"
+
+[node name="TotalMinerals" type="HBoxContainer" parent="Panel" unique_id=1624172507]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 239.0
+offset_right = 108.0
+offset_bottom = 262.0
+
+[node name="TextureRect" type="TextureRect" parent="Panel/TotalMinerals" unique_id=1164071497]
+layout_mode = 2
+texture = ExtResource("6_mferr")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="Panel/TotalMinerals" unique_id=1561950518]
+layout_mode = 2
+accessibility_name = "colony_number"
+
+[node name="TotalFuel" type="HBoxContainer" parent="Panel" unique_id=1506446032]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 265.0
+offset_right = 76.0
+offset_bottom = 288.0
+
+[node name="TextureRect" type="TextureRect" parent="Panel/TotalFuel" unique_id=1037175547]
+layout_mode = 2
+texture = ExtResource("7_uku7l")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="Panel/TotalFuel" unique_id=1535948197]
+layout_mode = 2
+accessibility_name = "total_fuel"
+
+[node name="TotalProcessedMetals" type="HBoxContainer" parent="Panel" unique_id=1283822135]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 293.0
+offset_right = 77.0
+offset_bottom = 316.0
+
+[node name="TextureRect" type="TextureRect" parent="Panel/TotalProcessedMetals" unique_id=379066011]
+layout_mode = 2
+texture = ExtResource("8_wcs6u")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="Panel/TotalProcessedMetals" unique_id=1168906527]
+layout_mode = 2
+accessibility_name = "total_processed"
+
+[node name="SelectedStar" type="VBoxContainer" parent="Panel" unique_id=450095585]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 332.0
+offset_right = 308.0
+offset_bottom = 610.0
+
+[node name="StarNameHeader" type="Label" parent="Panel/SelectedStar" unique_id=1623131768]
+layout_mode = 2
+text = "Звезда {star_name}"
+
+[node name="ColonizedNumber" type="Label" parent="Panel/SelectedStar" unique_id=748054863]
+layout_mode = 2
+text = "Колонизированных планет: {num}"
+
+[node name="TotalPopulation" type="HBoxContainer" parent="Panel/SelectedStar" unique_id=392560300]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel/SelectedStar/TotalPopulation" unique_id=158765934]
+layout_mode = 2
+texture = ExtResource("4_wm7lv")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="Panel/SelectedStar/TotalPopulation" unique_id=1530840306]
+layout_mode = 2
+accessibility_name = "total_population"
+
+[node name="TotalFood" type="HBoxContainer" parent="Panel/SelectedStar" unique_id=1989897358]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel/SelectedStar/TotalFood" unique_id=488089232]
+layout_mode = 2
+texture = ExtResource("5_ajh1b")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="Panel/SelectedStar/TotalFood" unique_id=931827026]
+layout_mode = 2
+accessibility_name = "total_food"
+
+[node name="TotalMinerals" type="HBoxContainer" parent="Panel/SelectedStar" unique_id=1365004107]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel/SelectedStar/TotalMinerals" unique_id=484952051]
+layout_mode = 2
+texture = ExtResource("6_mferr")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="Panel/SelectedStar/TotalMinerals" unique_id=1727239613]
+layout_mode = 2
+accessibility_name = "colony_number"
+
+[node name="TotalFuel" type="HBoxContainer" parent="Panel/SelectedStar" unique_id=1973900272]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel/SelectedStar/TotalFuel" unique_id=1489512886]
+layout_mode = 2
+texture = ExtResource("7_uku7l")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="Panel/SelectedStar/TotalFuel" unique_id=909230122]
+layout_mode = 2
+accessibility_name = "total_fuel"
+
+[node name="TotalProcessedMetals" type="HBoxContainer" parent="Panel/SelectedStar" unique_id=348465414]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel/SelectedStar/TotalProcessedMetals" unique_id=1648723180]
+layout_mode = 2
+texture = ExtResource("8_wcs6u")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="Panel/SelectedStar/TotalProcessedMetals" unique_id=118418278]
+layout_mode = 2
+accessibility_name = "total_processed"
+
+[node name="TextureButton" type="TextureButton" parent="Panel/SelectedStar" unique_id=1507241760]
+z_index = 6
+clip_contents = true
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.16
+tooltip_text = "ЫЫЫЫЫЫ"
+mouse_filter = 1
+texture_normal = ExtResource("9_wm7lv")
+texture_pressed = ExtResource("10_ajh1b")
+texture_hover = ExtResource("11_mferr")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Panel/SelectedStar/TextureButton" unique_id=866045583]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 13.0
+offset_right = 143.0
+offset_bottom = 36.0
+text = "Открыть звезду"
+
+[connection signal="button_down" from="Panel/SelectedStar/TextureButton" to="." method="_on_texture_button_button_down"]
+[connection signal="button_up" from="Panel/SelectedStar/TextureButton" to="." method="_on_texture_button_button_up"]
+[connection signal="pressed" from="Panel/SelectedStar/TextureButton" to="." method="_on_texture_button_pressed"]
