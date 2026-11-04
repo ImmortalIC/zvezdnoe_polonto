@@ -10,14 +10,14 @@ func _ready() -> void:
 
 func setStar(st:SimulationStar)->PlanetPanel:
 	selectedStar=st
-	var planetCount=0
+	var grid=get_node("PlanetGrid")
+	grid.size[0]=105*selectedStar.planets.size()
 	for planet in selectedStar.planets:
 		var planetView=planetScene.instantiate()
 		planetView.simulationObject=planet
-		planetView.position=Vector2((planetCount+1)*110,75)
-		get_node("PlanetGrid").add_child(planetView)
+		grid.add_child(planetView)
 		planetView.selectPlanet.connect(_on_selected_planet)
-		planetCount+=1
+	
 	return self
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

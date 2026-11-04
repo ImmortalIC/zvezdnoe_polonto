@@ -3,35 +3,45 @@
 [ext_resource type="Script" uid="uid://364po36wv6db" path="res://scripts/star_map/view/planet_view.gd" id="1_dp6gx"]
 [ext_resource type="Texture2D" uid="uid://cx4s4tys87kej" path="res://assets/UI/populated.png" id="2_p45ju"]
 [ext_resource type="Texture2D" uid="uid://bqd0fnofr0ivk" path="res://assets/UI/empty.png" id="3_m871p"]
-[ext_resource type="Texture2D" uid="uid://bqq5mdeul6c40" path="res://assets/UI/planet_cool.png" id="4_64d4x"]
+[ext_resource type="Texture2D" uid="uid://cakpxx3ftlyln" path="res://assets/UI/planet.png" id="4_dp6gx"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_jcr5x"]
-radius = 41.04875
-
-[node name="PlanetView" type="Node2D" unique_id=2070277624]
+[node name="PlanetView" type="Control" unique_id=1924546866]
+clip_contents = true
+layout_mode = 3
+anchor_right = 0.05473684
+anchor_bottom = 0.22222222
+grow_horizontal = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("1_dp6gx")
 colonizedIcon = ExtResource("2_p45ju")
 emptyIcon = ExtResource("3_m871p")
+metadata/_edit_use_anchors_ = true
 
-[node name="Planet" type="Sprite2D" parent="." unique_id=1371959777]
-texture = ExtResource("4_64d4x")
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1174457279]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+texture_normal = ExtResource("4_dp6gx")
+ignore_texture_size = true
+stretch_mode = 4
 
-[node name="Label" type="Label" parent="." unique_id=192998094]
-offset_left = -40.0
-offset_top = 42.0
-offset_right = 65.0
-offset_bottom = 65.0
-text = "Железяка"
+[node name="Label" type="Label" parent="." unique_id=922246746]
+layout_mode = 0
+offset_top = 96.0
+offset_right = 96.0
+offset_bottom = 120.0
 
-[node name="ColonizedIndication" type="Sprite2D" parent="." unique_id=217349513]
-position = Vector2(-1, 70)
-texture = ExtResource("2_p45ju")
+[node name="ColonizedIndication" type="TextureRect" parent="." unique_id=294598172]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.263
+anchor_top = 0.517
+anchor_right = 0.263
+anchor_bottom = 0.517
+offset_left = 12.647999
+offset_top = 45.551994
+offset_right = 36.648
+offset_bottom = 69.551994
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1369280139]
-position = Vector2(2, 45)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1177092192]
-position = Vector2(-2, -47)
-shape = SubResource("CircleShape2D_jcr5x")
-
-[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

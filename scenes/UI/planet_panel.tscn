@@ -31,10 +31,8 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.005
-offset_left = 6.0
-offset_top = 1.0
-offset_right = -4.0
-offset_bottom = 16.78003
+offset_right = -10.0
+offset_bottom = 15.780029
 texture = ExtResource("1_fajmp")
 
 [node name="StarName" type="Label" parent="." unique_id=1947199783]
@@ -443,11 +441,11 @@ offset_right = 1032.0
 offset_bottom = 24.0
 texture_normal = ExtResource("12_f2p0o")
 
-[node name="PlanetGrid" type="HBoxContainer" parent="." unique_id=2119288857]
+[node name="PlanetGrid" type="HBoxContainer" parent="." unique_id=864303646]
 layout_mode = 0
-offset_left = 19.0
-offset_top = 85.0
-offset_right = 720.0
-offset_bottom = 634.0
+offset_left = 8.0
+offset_top = 80.0
+offset_right = 72.0
+offset_bottom = 224.0
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

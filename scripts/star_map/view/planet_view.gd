@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 class_name PlanetView
 
 var simulationObject:SimulationPlanet
@@ -23,10 +23,5 @@ func _draw() -> void:
 		colonyState.texture=emptyIcon
 		label.label_settings.font_color=Color(255,255,255,255)
 
-
-	
-	
-
-func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if(event.is_pressed()):
-		selectPlanet.emit(simulationObject)
+func _on_texture_button_pressed() -> void:
+	selectPlanet.emit(simulationObject)
