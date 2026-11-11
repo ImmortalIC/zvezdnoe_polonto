@@ -8,6 +8,7 @@ var fuelCoef: float
 var habitalityCoef: float
 var name: String
 var colony: SimulationColony
+var parentStar: SimulationStar
 
 func setColony(newColony:SimulationColony)->SimulationPlanet:
 	colony=newColony

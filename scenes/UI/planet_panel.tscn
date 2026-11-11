@@ -154,281 +154,409 @@ offset_right = 1127.1925
 offset_bottom = 325.02557
 scale = Vector2(0.7496428, 1)
 
-[node name="ColonyStatsContainer" type="VBoxContainer" parent="." unique_id=123122113]
+[node name="ColonyStatsContainer" type="HBoxContainer" parent="." unique_id=1502236686]
 layout_mode = 0
-offset_left = 731.0
-offset_top = 322.0
-offset_right = 1021.0
-offset_bottom = 630.0
+offset_left = 720.0
+offset_top = 312.0
+offset_right = 1016.0
+offset_bottom = 656.0
 
-[node name="Population" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=1793747376]
+[node name="Col1" type="VBoxContainer" parent="ColonyStatsContainer" unique_id=123122113]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/Population" unique_id=539412114]
+[node name="Population" type="HBoxContainer" parent="ColonyStatsContainer/Col1" unique_id=1793747376]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/Col1/Population" unique_id=539412114]
 z_index = 4
 layout_mode = 2
 texture = ExtResource("4_m3fj6")
 expand_mode = 3
 
-[node name="Label" type="Label" parent="ColonyStatsContainer/Population" unique_id=18845336]
+[node name="Label" type="Label" parent="ColonyStatsContainer/Col1/Population" unique_id=18845336]
 layout_mode = 2
 text = "dsdsads"
 label_settings = ExtResource("9_1rjwy")
 
-[node name="Infrastructure" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=296975473]
+[node name="Infrastructure" type="HBoxContainer" parent="ColonyStatsContainer/Col1" unique_id=296975473]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/Infrastructure" unique_id=1618383130]
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/Col1/Infrastructure" unique_id=1618383130]
 z_index = 4
 layout_mode = 2
 texture = ExtResource("10_h58wr")
 expand_mode = 3
 
-[node name="Label" type="Label" parent="ColonyStatsContainer/Infrastructure" unique_id=2121472577]
+[node name="Label" type="Label" parent="ColonyStatsContainer/Col1/Infrastructure" unique_id=2121472577]
 layout_mode = 2
 text = "asdasd"
 label_settings = ExtResource("9_1rjwy")
 
-[node name="Label" type="Label" parent="ColonyStatsContainer" unique_id=462997695]
+[node name="Label" type="Label" parent="ColonyStatsContainer/Col1" unique_id=462997695]
 layout_mode = 2
 text = "Состав Экономики"
 label_settings = ExtResource("9_1rjwy")
 
-[node name="FoodEconomics" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=1114692422]
+[node name="FoodEconomics" type="HBoxContainer" parent="ColonyStatsContainer/Col1" unique_id=1114692422]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/FoodEconomics" unique_id=1034424820]
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/Col1/FoodEconomics" unique_id=1034424820]
 z_index = 4
 layout_mode = 2
 texture = ExtResource("5_gv4ni")
 expand_mode = 3
 
-[node name="Label" type="Label" parent="ColonyStatsContainer/FoodEconomics" unique_id=846756198]
+[node name="Label" type="Label" parent="ColonyStatsContainer/Col1/FoodEconomics" unique_id=846756198]
 layout_mode = 2
 text = "asdasdas"
 label_settings = ExtResource("9_1rjwy")
 
-[node name="MiningEconomics" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=1580993701]
+[node name="MiningEconomics" type="HBoxContainer" parent="ColonyStatsContainer/Col1" unique_id=1580993701]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/MiningEconomics" unique_id=441218276]
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/Col1/MiningEconomics" unique_id=441218276]
 z_index = 4
 layout_mode = 2
 texture = ExtResource("6_s4ic4")
 expand_mode = 3
 
-[node name="Label" type="Label" parent="ColonyStatsContainer/MiningEconomics" unique_id=563584860]
+[node name="Label" type="Label" parent="ColonyStatsContainer/Col1/MiningEconomics" unique_id=563584860]
 layout_mode = 2
 text = "adasdas"
 label_settings = ExtResource("9_1rjwy")
 
-[node name="FuelEconomics" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=358522696]
+[node name="FuelEconomics" type="HBoxContainer" parent="ColonyStatsContainer/Col1" unique_id=358522696]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/FuelEconomics" unique_id=419589786]
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/Col1/FuelEconomics" unique_id=419589786]
 z_index = 4
 layout_mode = 2
 texture = ExtResource("7_704v8")
 expand_mode = 3
 
-[node name="Label" type="Label" parent="ColonyStatsContainer/FuelEconomics" unique_id=1643001060]
+[node name="Label" type="Label" parent="ColonyStatsContainer/Col1/FuelEconomics" unique_id=1643001060]
 layout_mode = 2
 text = "asdadsa"
 label_settings = ExtResource("9_1rjwy")
 
-[node name="MaterialsEconomics" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=404835692]
+[node name="MaterialsEconomics" type="HBoxContainer" parent="ColonyStatsContainer/Col1" unique_id=404835692]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/MaterialsEconomics" unique_id=1125532949]
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/Col1/MaterialsEconomics" unique_id=1125532949]
 z_index = 4
 layout_mode = 2
 texture = ExtResource("11_ch0re")
 expand_mode = 3
 
-[node name="Label" type="Label" parent="ColonyStatsContainer/MaterialsEconomics" unique_id=2106757607]
+[node name="Label" type="Label" parent="ColonyStatsContainer/Col1/MaterialsEconomics" unique_id=2106757607]
 layout_mode = 2
 text = "asdsadas"
 label_settings = ExtResource("9_1rjwy")
 
-[node name="Label2" type="Label" parent="ColonyStatsContainer" unique_id=94560044]
+[node name="Label2" type="Label" parent="ColonyStatsContainer/Col1" unique_id=94560044]
 layout_mode = 2
 text = "Производство"
 label_settings = ExtResource("9_1rjwy")
 
-[node name="FoodProduction" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=187593886]
+[node name="FoodProduction" type="HBoxContainer" parent="ColonyStatsContainer/Col1" unique_id=187593886]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/FoodProduction" unique_id=989652753]
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/Col1/FoodProduction" unique_id=989652753]
 z_index = 4
 layout_mode = 2
 texture = ExtResource("5_gv4ni")
 expand_mode = 3
 
-[node name="Label" type="Label" parent="ColonyStatsContainer/FoodProduction" unique_id=1959268942]
+[node name="Label" type="Label" parent="ColonyStatsContainer/Col1/FoodProduction" unique_id=1959268942]
 layout_mode = 2
 text = "asdasdas"
 label_settings = ExtResource("9_1rjwy")
 
-[node name="MineralsProduction" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=1918497843]
+[node name="MineralsProduction" type="HBoxContainer" parent="ColonyStatsContainer/Col1" unique_id=1918497843]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/MineralsProduction" unique_id=1738454591]
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/Col1/MineralsProduction" unique_id=1738454591]
 z_index = 4
 layout_mode = 2
 texture = ExtResource("6_s4ic4")
 expand_mode = 3
 
-[node name="Label" type="Label" parent="ColonyStatsContainer/MineralsProduction" unique_id=1356356078]
+[node name="Label" type="Label" parent="ColonyStatsContainer/Col1/MineralsProduction" unique_id=1356356078]
 layout_mode = 2
 text = "adasdas"
 label_settings = ExtResource("9_1rjwy")
 
-[node name="FuelProduction" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=1343808513]
+[node name="FuelProduction" type="HBoxContainer" parent="ColonyStatsContainer/Col1" unique_id=1343808513]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/FuelProduction" unique_id=1822151486]
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/Col1/FuelProduction" unique_id=1822151486]
 z_index = 4
 layout_mode = 2
 texture = ExtResource("7_704v8")
 expand_mode = 3
 
-[node name="Label" type="Label" parent="ColonyStatsContainer/FuelProduction" unique_id=1352934705]
+[node name="Label" type="Label" parent="ColonyStatsContainer/Col1/FuelProduction" unique_id=1352934705]
 layout_mode = 2
 text = "asdadsa"
 label_settings = ExtResource("9_1rjwy")
 
-[node name="MaterialsProduction" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=803809615]
+[node name="MaterialsProduction" type="HBoxContainer" parent="ColonyStatsContainer/Col1" unique_id=803809615]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/MaterialsProduction" unique_id=317079103]
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/Col1/MaterialsProduction" unique_id=317079103]
 z_index = 4
 layout_mode = 2
 texture = ExtResource("11_ch0re")
 expand_mode = 3
 
-[node name="Label" type="Label" parent="ColonyStatsContainer/MaterialsProduction" unique_id=1500443565]
+[node name="Label" type="Label" parent="ColonyStatsContainer/Col1/MaterialsProduction" unique_id=1500443565]
 layout_mode = 2
 text = "asdsadas"
 label_settings = ExtResource("9_1rjwy")
 
-[node name="Label3" type="Label" parent="ColonyStatsContainer" unique_id=1706111220]
+[node name="Label3" type="Label" parent="ColonyStatsContainer/Col1" unique_id=1706111220]
 layout_mode = 2
 text = "Потребление"
 label_settings = ExtResource("9_1rjwy")
 
-[node name="FoodConsuption" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=654473155]
+[node name="FoodConsuption" type="HBoxContainer" parent="ColonyStatsContainer/Col1" unique_id=654473155]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/FoodConsuption" unique_id=1228323982]
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/Col1/FoodConsuption" unique_id=1228323982]
 z_index = 4
 layout_mode = 2
 texture = ExtResource("5_gv4ni")
 expand_mode = 3
 
-[node name="Label" type="Label" parent="ColonyStatsContainer/FoodConsuption" unique_id=1152710135]
+[node name="Label" type="Label" parent="ColonyStatsContainer/Col1/FoodConsuption" unique_id=1152710135]
 layout_mode = 2
 text = "asdasdas"
 label_settings = ExtResource("9_1rjwy")
 
-[node name="MineralsConsumption" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=1147698266]
+[node name="MineralsConsumption" type="HBoxContainer" parent="ColonyStatsContainer/Col1" unique_id=1147698266]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/MineralsConsumption" unique_id=2074595037]
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/Col1/MineralsConsumption" unique_id=2074595037]
 z_index = 4
 layout_mode = 2
 texture = ExtResource("6_s4ic4")
 expand_mode = 3
 
-[node name="Label" type="Label" parent="ColonyStatsContainer/MineralsConsumption" unique_id=1760767046]
+[node name="Label" type="Label" parent="ColonyStatsContainer/Col1/MineralsConsumption" unique_id=1760767046]
 layout_mode = 2
 text = "adasdas"
 label_settings = ExtResource("9_1rjwy")
 
-[node name="FuelConsumption" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=239957769]
+[node name="FuelConsumption" type="HBoxContainer" parent="ColonyStatsContainer/Col1" unique_id=239957769]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/FuelConsumption" unique_id=668599478]
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/Col1/FuelConsumption" unique_id=668599478]
 z_index = 4
 layout_mode = 2
 texture = ExtResource("7_704v8")
 expand_mode = 3
 
-[node name="Label" type="Label" parent="ColonyStatsContainer/FuelConsumption" unique_id=446631996]
+[node name="Label" type="Label" parent="ColonyStatsContainer/Col1/FuelConsumption" unique_id=446631996]
 layout_mode = 2
 text = "asdadsa"
 label_settings = ExtResource("9_1rjwy")
 
-[node name="MaterialsConsumption" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=854244215]
+[node name="MaterialsConsumption" type="HBoxContainer" parent="ColonyStatsContainer/Col1" unique_id=854244215]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/MaterialsConsumption" unique_id=1057490303]
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/Col1/MaterialsConsumption" unique_id=1057490303]
 z_index = 4
 layout_mode = 2
 texture = ExtResource("11_ch0re")
 expand_mode = 3
 
-[node name="Label" type="Label" parent="ColonyStatsContainer/MaterialsConsumption" unique_id=337897656]
+[node name="Label" type="Label" parent="ColonyStatsContainer/Col1/MaterialsConsumption" unique_id=337897656]
 layout_mode = 2
 text = "asdsadas"
 label_settings = ExtResource("9_1rjwy")
 
-[node name="Label4" type="Label" parent="ColonyStatsContainer" unique_id=953096940]
+[node name="Label4" type="Label" parent="ColonyStatsContainer/Col1" unique_id=953096940]
 layout_mode = 2
 text = "Хранилище"
 label_settings = ExtResource("9_1rjwy")
 
-[node name="FoodStorage" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=408548197]
+[node name="FoodStorage" type="HBoxContainer" parent="ColonyStatsContainer/Col1" unique_id=408548197]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/FoodStorage" unique_id=673979324]
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/Col1/FoodStorage" unique_id=673979324]
 z_index = 4
 layout_mode = 2
 texture = ExtResource("5_gv4ni")
 expand_mode = 3
 
-[node name="Label" type="Label" parent="ColonyStatsContainer/FoodStorage" unique_id=2122059323]
+[node name="Label" type="Label" parent="ColonyStatsContainer/Col1/FoodStorage" unique_id=2122059323]
 layout_mode = 2
 text = "asdasdas"
 label_settings = ExtResource("9_1rjwy")
 
-[node name="MineralsStorage" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=1145852275]
+[node name="MineralsStorage" type="HBoxContainer" parent="ColonyStatsContainer/Col1" unique_id=1145852275]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/MineralsStorage" unique_id=1490271460]
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/Col1/MineralsStorage" unique_id=1490271460]
 z_index = 4
 layout_mode = 2
 texture = ExtResource("6_s4ic4")
 expand_mode = 3
 
-[node name="Label" type="Label" parent="ColonyStatsContainer/MineralsStorage" unique_id=399144883]
+[node name="Label" type="Label" parent="ColonyStatsContainer/Col1/MineralsStorage" unique_id=399144883]
 layout_mode = 2
 text = "adasdas"
 label_settings = ExtResource("9_1rjwy")
 
-[node name="FuelStorage" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=1670692404]
+[node name="FuelStorage" type="HBoxContainer" parent="ColonyStatsContainer/Col1" unique_id=1670692404]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/FuelStorage" unique_id=2049158620]
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/Col1/FuelStorage" unique_id=2049158620]
 z_index = 4
 layout_mode = 2
 texture = ExtResource("7_704v8")
 expand_mode = 3
 
-[node name="Label" type="Label" parent="ColonyStatsContainer/FuelStorage" unique_id=1305749497]
+[node name="Label" type="Label" parent="ColonyStatsContainer/Col1/FuelStorage" unique_id=1305749497]
 layout_mode = 2
 text = "asdadsa"
 label_settings = ExtResource("9_1rjwy")
 
-[node name="MaterialsStorage" type="HBoxContainer" parent="ColonyStatsContainer" unique_id=736979845]
+[node name="MaterialsStorage" type="HBoxContainer" parent="ColonyStatsContainer/Col1" unique_id=736979845]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/MaterialsStorage" unique_id=1501218227]
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/Col1/MaterialsStorage" unique_id=1501218227]
 z_index = 4
 layout_mode = 2
 texture = ExtResource("11_ch0re")
 expand_mode = 3
 
-[node name="Label" type="Label" parent="ColonyStatsContainer/MaterialsStorage" unique_id=1942704267]
+[node name="Label" type="Label" parent="ColonyStatsContainer/Col1/MaterialsStorage" unique_id=1942704267]
+layout_mode = 2
+text = "asdsadas"
+label_settings = ExtResource("9_1rjwy")
+
+[node name="Col2" type="VBoxContainer" parent="ColonyStatsContainer" unique_id=1132236302]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="ColonyStatsContainer/Col2" unique_id=1068888456]
+layout_mode = 2
+text = "Экспорт"
+label_settings = ExtResource("9_1rjwy")
+
+[node name="FoodExport" type="HBoxContainer" parent="ColonyStatsContainer/Col2" unique_id=1269157165]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/Col2/FoodExport" unique_id=468550110]
+z_index = 4
+layout_mode = 2
+texture = ExtResource("5_gv4ni")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="ColonyStatsContainer/Col2/FoodExport" unique_id=612252800]
+layout_mode = 2
+text = "asdasdas"
+label_settings = ExtResource("9_1rjwy")
+
+[node name="MineralsExport" type="HBoxContainer" parent="ColonyStatsContainer/Col2" unique_id=2075746786]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/Col2/MineralsExport" unique_id=714678707]
+z_index = 4
+layout_mode = 2
+texture = ExtResource("6_s4ic4")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="ColonyStatsContainer/Col2/MineralsExport" unique_id=1981115418]
+layout_mode = 2
+text = "adasdas"
+label_settings = ExtResource("9_1rjwy")
+
+[node name="FuelExport" type="HBoxContainer" parent="ColonyStatsContainer/Col2" unique_id=583304007]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/Col2/FuelExport" unique_id=1349992970]
+z_index = 4
+layout_mode = 2
+texture = ExtResource("7_704v8")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="ColonyStatsContainer/Col2/FuelExport" unique_id=1565783939]
+layout_mode = 2
+text = "asdadsa"
+label_settings = ExtResource("9_1rjwy")
+
+[node name="MetalsExport" type="HBoxContainer" parent="ColonyStatsContainer/Col2" unique_id=358655615]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/Col2/MetalsExport" unique_id=928894334]
+z_index = 4
+layout_mode = 2
+texture = ExtResource("11_ch0re")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="ColonyStatsContainer/Col2/MetalsExport" unique_id=1588023726]
+layout_mode = 2
+text = "asdsadas"
+label_settings = ExtResource("9_1rjwy")
+
+[node name="Label3" type="Label" parent="ColonyStatsContainer/Col2" unique_id=657281928]
+layout_mode = 2
+text = "Импорт"
+label_settings = ExtResource("9_1rjwy")
+
+[node name="FoodImport" type="HBoxContainer" parent="ColonyStatsContainer/Col2" unique_id=1722549158]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/Col2/FoodImport" unique_id=87909805]
+z_index = 4
+layout_mode = 2
+texture = ExtResource("5_gv4ni")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="ColonyStatsContainer/Col2/FoodImport" unique_id=1440226015]
+layout_mode = 2
+text = "asdasdas"
+label_settings = ExtResource("9_1rjwy")
+
+[node name="MineralsImport" type="HBoxContainer" parent="ColonyStatsContainer/Col2" unique_id=1098594116]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/Col2/MineralsImport" unique_id=1619862999]
+z_index = 4
+layout_mode = 2
+texture = ExtResource("6_s4ic4")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="ColonyStatsContainer/Col2/MineralsImport" unique_id=1654279751]
+layout_mode = 2
+text = "adasdas"
+label_settings = ExtResource("9_1rjwy")
+
+[node name="FuelImport" type="HBoxContainer" parent="ColonyStatsContainer/Col2" unique_id=1401429394]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/Col2/FuelImport" unique_id=1770569407]
+z_index = 4
+layout_mode = 2
+texture = ExtResource("7_704v8")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="ColonyStatsContainer/Col2/FuelImport" unique_id=2012119254]
+layout_mode = 2
+text = "asdadsa"
+label_settings = ExtResource("9_1rjwy")
+
+[node name="MetalsImport" type="HBoxContainer" parent="ColonyStatsContainer/Col2" unique_id=1479477724]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColonyStatsContainer/Col2/MetalsImport" unique_id=1358034054]
+z_index = 4
+layout_mode = 2
+texture = ExtResource("11_ch0re")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="ColonyStatsContainer/Col2/MetalsImport" unique_id=58661364]
 layout_mode = 2
 text = "asdsadas"
 label_settings = ExtResource("9_1rjwy")

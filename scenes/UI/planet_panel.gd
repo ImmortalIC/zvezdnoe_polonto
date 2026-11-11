@@ -46,28 +46,39 @@ func _process(delta: float) -> void:
 	var colony:=selectedPlanet.colony
 	get_node("PlanetState").text="Колония империи {0}".format([colony.claimingEmpire.name])
 	get_node("ColonyStatsContainer").visible=true
-	get_node("ColonyStatsContainer/Population/Label").text=str(colony.population)
-	get_node("ColonyStatsContainer/Infrastructure/Label").text="Инфраструктура {0}%".format([str(colony.infrastructure*100)])
+	get_node("ColonyStatsContainer/Col1/Population/Label").text=str(colony.population)
+	get_node("ColonyStatsContainer/Col1/Infrastructure/Label").text="Инфраструктура {0}%".format([str(colony.infrastructure*100)])
 	
-	get_node("ColonyStatsContainer/FoodEconomics/Label").text="{0}%".format([str(colony.economicsStructure.food)])
-	get_node("ColonyStatsContainer/MiningEconomics/Label").text="{0}%".format([str(colony.economicsStructure.minerals)])
-	get_node("ColonyStatsContainer/FuelEconomics/Label").text="{0}%".format([str(colony.economicsStructure.fuel)])
-	get_node("ColonyStatsContainer/MaterialsEconomics/Label").text="{0}%".format([str(colony.economicsStructure.processedMaterials)])
+	get_node("ColonyStatsContainer/Col1/FoodEconomics/Label").text="{0}%".format([str(colony.economicsStructure.food)])
+	get_node("ColonyStatsContainer/Col1/MiningEconomics/Label").text="{0}%".format([str(colony.economicsStructure.minerals)])
+	get_node("ColonyStatsContainer/Col1/FuelEconomics/Label").text="{0}%".format([str(colony.economicsStructure.fuel)])
+	get_node("ColonyStatsContainer/Col1/MaterialsEconomics/Label").text="{0}%".format([str(colony.economicsStructure.processedMaterials)])
 	
-	get_node("ColonyStatsContainer/FoodProduction/Label").text=str(colony.producedLastTick.food)
-	get_node("ColonyStatsContainer/MineralsProduction/Label").text=str(colony.producedLastTick.minerals)
-	get_node("ColonyStatsContainer/FuelProduction/Label").text=str(colony.producedLastTick.fuel)
-	get_node("ColonyStatsContainer/MaterialsProduction/Label").text=str(colony.producedLastTick.processedMaterials)
+	get_node("ColonyStatsContainer/Col1/FoodProduction/Label").text=str(colony.producedLastTick.food)
+	get_node("ColonyStatsContainer/Col1/MineralsProduction/Label").text=str(colony.producedLastTick.minerals)
+	get_node("ColonyStatsContainer/Col1/FuelProduction/Label").text=str(colony.producedLastTick.fuel)
+	get_node("ColonyStatsContainer/Col1/MaterialsProduction/Label").text=str(colony.producedLastTick.processedMaterials)
 	
-	get_node("ColonyStatsContainer/FoodConsuption/Label").text=str(colony.consumedLastTick.food)
-	get_node("ColonyStatsContainer/MineralsConsumption/Label").text=str(colony.consumedLastTick.minerals)
-	get_node("ColonyStatsContainer/FuelConsumption/Label").text=str(colony.consumedLastTick.fuel)
-	get_node("ColonyStatsContainer/MaterialsConsumption/Label").text=str(colony.consumedLastTick.processedMaterials)
+	get_node("ColonyStatsContainer/Col1/FoodConsuption/Label").text=str(colony.consumedLastTick.food)
+	get_node("ColonyStatsContainer/Col1/MineralsConsumption/Label").text=str(colony.consumedLastTick.minerals)
+	get_node("ColonyStatsContainer/Col1/FuelConsumption/Label").text=str(colony.consumedLastTick.fuel)
+	get_node("ColonyStatsContainer/Col1/MaterialsConsumption/Label").text=str(colony.consumedLastTick.processedMaterials)
 	
-	get_node("ColonyStatsContainer/FoodStorage/Label").text=str(colony.storage.food)
-	get_node("ColonyStatsContainer/MineralsStorage/Label").text=str(colony.storage.minerals)
-	get_node("ColonyStatsContainer/FuelStorage/Label").text=str(colony.storage.fuel)
-	get_node("ColonyStatsContainer/MaterialsStorage/Label").text=str(colony.storage.processedMaterials)
+	get_node("ColonyStatsContainer/Col1/FoodStorage/Label").text=str(colony.storage.food)
+	get_node("ColonyStatsContainer/Col1/MineralsStorage/Label").text=str(colony.storage.minerals)
+	get_node("ColonyStatsContainer/Col1/FuelStorage/Label").text=str(colony.storage.fuel)
+	get_node("ColonyStatsContainer/Col1/MaterialsStorage/Label").text=str(colony.storage.processedMaterials)
+	
+	get_node("ColonyStatsContainer/Col2/FoodImport/Label").text=str(colony.importedLastTick.food)
+	get_node("ColonyStatsContainer/Col2/MineralsImport/Label").text=str(colony.importedLastTick.minerals)
+	get_node("ColonyStatsContainer/Col2/FuelImport/Label").text=str(colony.importedLastTick.fuel)
+	get_node("ColonyStatsContainer/Col2/MetalsImport/Label").text=str(colony.importedLastTick.processedMaterials)
+	
+	get_node("ColonyStatsContainer/Col2/FoodExport/Label").text=str(colony.exportedLastTick.food)
+	get_node("ColonyStatsContainer/Col2/MineralsExport/Label").text=str(colony.exportedLastTick.minerals)
+	get_node("ColonyStatsContainer/Col2/FuelExport/Label").text=str(colony.exportedLastTick.fuel)
+	get_node("ColonyStatsContainer/Col2/MetalsExport/Label").text=str(colony.exportedLastTick.processedMaterials)
+	
 	
 func _on_selected_planet(pl:SimulationPlanet)->void:
 	selectedPlanet=pl

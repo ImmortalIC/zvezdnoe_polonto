@@ -57,6 +57,7 @@ func loadTestGalaxy() -> void:
 				planetData['habitability']
 				)
 			star.simulationObject.planets.append(planet)
+			planet.parentStar=star.simulationObject
 			if(planetData['colony']!=null):
 				var col=planetData['colony']
 				createColony(
